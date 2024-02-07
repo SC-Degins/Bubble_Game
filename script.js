@@ -1,6 +1,6 @@
 function Makebubble(){
     var a ="";
-    for(var i=1; i<=153; i++){
+    for(var i=1; i<=152; i++){
         var num = Math.floor(Math.random()*10);
         a += `<div class="bubble">${num}</div>`;    
     }
