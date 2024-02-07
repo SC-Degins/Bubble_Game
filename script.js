@@ -37,6 +37,18 @@ document.querySelector("#panel-bottom").addEventListener("click", function(dets)
     getNewHit();
 }
 })
+var mymusic = document.querySelector("#mymusic");
+var icon = document.querySelector("#icon");
+icon.onclick = function(){
+    if(mymusic.paused){
+    mymusic.play();
+    icon.src = "paused.webp";
+    }else{
+        mymusic.pause();
+        icon.src = "play.png";
+    }
+}
+
 Timeout();
 Makebubble();
 getNewHit();
