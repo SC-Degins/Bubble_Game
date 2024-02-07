@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    background-image: url("landscape-illustration-with-river-forest-mountains-background-generative-ai_803320-1442.avif");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main-box {
+    width: 70%;
+    height: 85%;
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#panel-top {
+    height: 70px;
+    width: 100%;
+    background-color: rgba(11, 243, 212, 0.183);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20vw;
+}
+#panel-top>h2 {
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.number,
+.timer,
+.score {
+    color:rgb(4, 87, 76);
+    height: 35px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size:1.9vw;
+    font-weight: 600;
+}
+#panel-bottom {
+    background-color: #ffffff1c;
+    backdrop-filter: blur(10px);
+    height: calc(100% - 70px);
+    width: 100%;
+    padding:  15px 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#panel-bottom>h1{
+    font-size: 10vw;
+    background-image: linear-gradient(to right top, #845ec2, #7a7ed6, #7a9be2, #87b4e9, #a2cced, #a4cde8, #a7cee3, #accfde, #8ebcce, #70a9bf, #4e96af, #2184a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: zoomin 0.5s linear 1;
+}
+@keyframes zoomin {
+    from{
+        font-size: 0vw;
+    }
+    to{
+        font-size: 10vw;
+    }
+}
+#panel-bottom .bubble {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right,red,orange,yellow);
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 700;
+}
+#panel-bottom .bubble:hover {
+    background-color: rgb(17, 65, 17);
+}
