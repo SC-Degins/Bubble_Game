@@ -1,17 +1,21 @@
+var click = document.getElementById("music");
 function Makebubble(){
     var a ="";
     for(var i=1; i<=156; i++){
-        var num = Math.floor(Math.random()*10);
+        var num = Math.floor(Math.random()*20);
         a += `<div class="bubble">${num}</div>`;    
     }
     document.querySelector("#panel-bottom").innerHTML = a;
+    document.querySelector("#panel-bottom").addEventListener("click",function(){
+        click.play();
+    })
 }
 var hitrn = 0;
 function getNewHit(){
-    hitrn = Math.floor(Math.random() * 10);
+    hitrn = Math.floor(Math.random() * 20);
     document.querySelector(".number").innerHTML = hitrn;
 }
-var timer = 60;
+var timer = 120;
 function Timeout(){
     var timerint = setInterval(function(){
         if(timer > 0){
