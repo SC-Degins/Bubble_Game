@@ -40,9 +40,8 @@ html, body{
     background-color: rgba(197, 243, 11, 0.527);
     backdrop-filter: blur(10px);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 0px 20vw;
 }
 #panel-top>h2 {
     color: #000000;
