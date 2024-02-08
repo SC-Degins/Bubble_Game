@@ -116,11 +116,11 @@ html, body{
 }
 @media (max-width:600px) {
     #main-box{
-        height: 89%;
+        height: 90%;
+        width: 90%;
     }
     #panel-top{
         height: 30px;
-        padding: 5px;
         justify-content: space-around;
     }
     #panel-top>h2{
@@ -134,12 +134,12 @@ html, body{
         height: 20px;
     }
     #panel-bottom{
-        padding: 4px 5px;
+        padding: 9px 5px;
         height: calc(100% - 30px);
     }
     #panel-bottom .bubble{
         font-size: 4vw;
-        height: 20px;
-        width: 20px;
+        height: 30px;
+        width: 30px;
     }
 }
