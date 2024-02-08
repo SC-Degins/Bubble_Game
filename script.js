@@ -11,7 +11,7 @@ function getNewHit(){
     hitrn = Math.floor(Math.random() * 10);
     document.querySelector(".number").innerHTML = hitrn;
 }
-var timer = 60;
+var timer = 20;
 function Timeout(){
     var timerint = setInterval(function(){
         if(timer > 0){
