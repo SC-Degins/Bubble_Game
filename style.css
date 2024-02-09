@@ -124,7 +124,7 @@ html, body{
     top: 5vh;
     width: 7vw;
     height: 5vh;
-    font-size: 1vw;
+    font-size: 1.2vw;
     border: 1px solid #000;
     border-radius:10px;
     text-transform: uppercase;
@@ -306,5 +306,23 @@ html, body{
 .game-start h2 button {
     bottom: 8vh;
     width: 90%;
+}
+.reload {
+    z-index: 99;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0.5vh;
+    width: 55vw;
+    height: 4vh;
+    font-size: 3vw;
+    letter-spacing: 1.2vw;
+    border: 1px solid #000;
+    border-radius:10px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+    background-color: #ffffff4a;
+    backdrop-filter: blur(9px);
 }
 }

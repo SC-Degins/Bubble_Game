@@ -58,7 +58,7 @@ var loader = document.querySelector("#loader-template");
 var btn = document.querySelector(".btn");
 function loaderup(){
 btn.addEventListener("click", function(){
-    loader.style.top = "-100%";
+    loader.style.top = "-110%";
 })
 }
 
