@@ -15,7 +15,7 @@ function getNewHit(){
     hitrn = Math.floor(Math.random() * 20);
     document.querySelector(".number").innerHTML = hitrn;
 }
-var timer = 120;
+var timer = 123;
 function Timeout(){
     var timerint = setInterval(function(){
         if(timer > 0){
@@ -46,13 +46,23 @@ var icon = document.querySelector("#icon");
 icon.onclick = function(){
     if(mymusic.paused){
     mymusic.play();
-    icon.src = "paused.webp";
+    icon.src = "pause1.png";
     }else{
         mymusic.pause();
-        icon.src = "play.png";
+        icon.src = "play1.png";
     }
 }
 
+// gsap
+var loader = document.querySelector("#loader-template");
+var btn = document.querySelector(".btn");
+function loaderup(){
+btn.addEventListener("click", function(){
+    loader.style.top = "-100%";
+})
+}
+
+loaderup();
 Timeout();
 Makebubble();
 getNewHit();

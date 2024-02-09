@@ -18,14 +18,17 @@ html, body{
     align-items: center;
     justify-content: center;
 }
-#main h1 {
+#loader h3 {
     display: flex;
     margin-top: 5px;
     gap: 5px;
+    color: #fff;
+    position: absolute;
+    bottom: 0vw;
 }
-#main h1 img {
+#loader h3 img {
     width: 50px;
-    margin-top: -5px;
+    margin-top: -14px;
 }
 #main-box {
     width: 70%;
@@ -114,6 +117,138 @@ html, body{
     box-shadow: inset 3px 3px 10px rgb(255, 255, 255),
     inset -3px -3px 10px rgb(46, 46, 46);
 }
+.reload {
+    z-index: 99;
+    position: absolute;
+    right: 2vw;
+    top: 5vh;
+    width: 7vw;
+    height: 5vh;
+    font-size: 1vw;
+    border: 1px solid #000;
+    border-radius:10px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+    background-color: #ffffff4a;
+    backdrop-filter: blur(9px);
+}
+
+/* loader animation */
+@font-face {
+    font-family: Game;
+    src: url("the-grinch-font/TheGrinch-DYWWd.otf");
+}
+@font-face {
+    font-family: Game_start;
+    src: url("pacfont/PAC-FONT.TTF");
+}
+#loader-template {
+    background-image: url("Bubble art lockscreen.jpeg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-position: center;
+    position: fixed;
+    z-index: 999;
+    top: 0%;
+    transition: all ease 0.5s;
+}
+#main #loader {
+    width: 50%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8d8b8b5a;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    position: relative;
+}
+
+@keyframes change {
+    from{
+        filter:hue-rotate(0deg);
+    }
+    to{
+        filter:hue-rotate(600deg);
+    }
+}
+#main #loader:hover{
+    animation: change 10s linear infinite;
+    box-shadow: 0px 0px 100px 40px rgba(0, 255, 255, 0.519);
+    transition: all ease 1s;
+}
+.game-start{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+.game-start h1 {
+    font-size: 4.5vw;
+    margin-bottom: 4vh;
+    font-family: Game;
+    -webkit-text-fill-color: yellow;
+    font-weight: 500;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 2px;
+}
+.game-start h2 {
+    font-size: 2.5vw;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+
+.game-start h2 button {
+    font-size: 1.8vw;
+    width: 30vw;
+    height: 6vh;
+    background: linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
+    filter: drop-shadow(1px 1px 10px black);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: Game_start;
+    letter-spacing: 0.5vw;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 2px;
+    position: absolute;
+    bottom: 4vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.game-start button:hover {
+    animation: colorchange 7s linear infinite;
+    animation-delay: 0.2s;
+}
+@keyframes colorchange {
+    0%{
+        filter: hue-rotate(10deg);
+    }
+    50%{
+        filter: hue-rotate(500deg);
+    }
+    100%{
+        filter: hue-rotate(10deg);
+    }
+}
+
+/* breakpoint */
+
 @media (max-width:600px) {
     #main-box{
         height: 90%;
@@ -142,4 +277,34 @@ html, body{
         height: 30px;
         width: 30px;
     }
+    #loader-template>#loader {
+        height: 40%;
+    }
+    .game-start>h1 {
+        font-size: 5vw;
+        -webkit-text-stroke-width: 0px;
+    }
+    .game-start>h2 {
+        font-size: 3vw;
+        color: #fff;
+        padding-bottom: 20px;
+    }
+    #loader h3 {
+    display: flex;
+    margin-top: 5px;
+    gap: 0px;
+    color: #fff;
+    position: absolute;
+    bottom: 3vh;
+    font-size: 3vw;
+}
+#loader h3 img {
+    width: 30px;
+    margin-top: -9px;
+    margin-left: -1px;
+}
+.game-start h2 button {
+    bottom: 8vh;
+    width: 90%;
+}
 }
