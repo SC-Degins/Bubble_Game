@@ -15,7 +15,7 @@ function getNewHit(){
     hitrn = Math.floor(Math.random() * 20);
     document.querySelector(".number").innerHTML = hitrn;
 }
-var timer = 123;
+var timer = 120;
 function Timeout(){
     var timerint = setInterval(function(){
         if(timer > 0){
@@ -59,10 +59,10 @@ var btn = document.querySelector(".btn");
 function loaderup(){
 btn.addEventListener("click", function(){
     loader.style.top = "-110%";
+    Timeout();
 })
 }
 
 loaderup();
-Timeout();
 Makebubble();
 getNewHit();
