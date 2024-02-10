@@ -64,7 +64,7 @@ html, body{
     justify-content: center;
     background-color: #e8e8e8;
     border-radius: 10px;
-    font-size:1.9vw;
+    font-size:1.vw;
     font-weight: 600;
     border: 1px solid black;
     box-shadow: inset 2px 2px 10px #1b1b1b4a,
@@ -248,6 +248,24 @@ html, body{
 }
 
 /* breakpoint */
+@media (max-width:1140px) {
+    .reload {
+    z-index: 99;
+    position: absolute;
+    right: 2vw;
+    top: 2vh;
+    width: 15vw;
+    height: 4vh;
+    font-size: 2vw;
+    border: 1px solid #000;
+    border-radius:10px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+    background-color: #ffffff4a;
+    backdrop-filter: blur(9px);
+}
+}
 
 @media (max-width:600px) {
     #main-box{
@@ -267,6 +285,9 @@ html, body{
     .score{
         width: 40px;
         height: 20px;
+        font-size: 2.2vw;
+        display: flex;
+        align-items: center;
     }
     #panel-bottom{
         padding: 9px 5px;

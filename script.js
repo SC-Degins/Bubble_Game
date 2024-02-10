@@ -16,11 +16,16 @@ function getNewHit(){
     document.querySelector(".number").innerHTML = hitrn;
 }
 var timer = 120;
-function Timeout(){
+function Timeout(color){
+    document.querySelector(".timer").style.color = color;
     var timerint = setInterval(function(){
-        if(timer > 0){
+        if(timer >0){
             timer--;
             document.querySelector(".timer").textContent = timer;
+            // if(timer < 10){
+            //     Timeout("red");
+            //     timer += 1;
+            // }
         }
         else{
             clearInterval(timerint);
@@ -60,8 +65,43 @@ function loaderup(){
 btn.addEventListener("click", function(){
     loader.style.top = "-110%";
     Timeout();
+    // changeColor();
 })
 }
+
+
+
+//   function changeColor(color) {
+//     document.querySelector(".timer").style.color = color;
+//   }
+
+//   // Function to start the countdown timer
+//   function startTimer(duration, display) {
+//     let timer = duration;
+//     let intervalId = setInterval(function () {
+//       timer--;
+//       display.textContent = timer;
+
+//       // Check if timer reaches 10 seconds
+//       if (timer <= 10) {
+//         // Change color
+//         changeColor("red");
+//       }
+
+//       // Check if timer reaches 0 seconds
+//       if (timer <= 0) {
+//         clearInterval(intervalId);
+//         display.textContent = "Time's up!";
+//       }
+//     }, 1000);
+//   }
+
+//   loader().onclick = function () {
+//     const tenSeconds = 10;
+//     const display = document.getElementById("countdown");
+//     startTimer(tenSeconds, display);
+//   };
+
 
 loaderup();
 Makebubble();
