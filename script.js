@@ -1,7 +1,7 @@
 var click = document.getElementById("music");
 function Makebubble(){
     var a ="";
-    for(var i=1; i<=156; i++){
+    for(var i=1; i<=153; i++){
         var num = Math.floor(Math.random()*20);
         a += `<div class="bubble">${num}</div>`;    
     }
@@ -15,17 +15,15 @@ function getNewHit(){
     hitrn = Math.floor(Math.random() * 20);
     document.querySelector(".number").innerHTML = hitrn;
 }
-var timer = 15;
-function Timeout(color){
-    document.querySelector(".timer").style.color = color;
+var timer = 30;
+function Timeout(){
     var timerint = setInterval(function(){
-        if (timer > 10) {
+        if (timer > 0) {
           timer--;
           document.querySelector(".timer").textContent = timer;
-        } else if (timer < 9) {
-          Timeout("red");
-          timer--;
-          document.querySelector(".timer").textContent = timer;
+          if (timer <= 10){
+            document.querySelector(".timer").style.color = "red";
+          }
         } else {
           clearInterval(timerint);
           document.querySelector(
@@ -48,14 +46,15 @@ document.querySelector("#panel-bottom").addEventListener("click", function(dets)
 }
 })
 var mymusic = document.querySelector("#mymusic");
+var icons = document.querySelector("#icons");
 var icon = document.querySelector("#icon");
 icon.onclick = function(){
     if(mymusic.paused){
     mymusic.play();
-    icon.src = "pause1.png";
+    icon.innerHTML = `<i id="icon" class="ri-volume-up-line"></i>`;
     }else{
         mymusic.pause();
-        icon.src = "play1.png";
+        icon.innerHTML = `<i id="icon" class="ri-volume-mute-line"></i>`;
     }
 }
 
