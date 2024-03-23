@@ -15,19 +15,38 @@
   <body>
     <div id="main">
       <div id="loader-template">
-        <div id="loader">
-          <div class="game-start">
-            <h1>Bubble Tapping Game</h1>
-            <h2>
-              Press button to Start
-              <button class="btn">Start</button>
-            </h2>
-            <h3>
+        <div id="loader-back"></div>
+        <div id="setiing-div">
+          <h3>
         If You Want To Play Music&nbsp;
         <span id="icon">
        <i id="icon" class="ri-volume-mute-line"></i>
        </span>
       </h3>
+      <div id="color-plate">
+        <div class="color" id="color"><span>linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12)</span></div>
+        <div class="color"><span>linear-gradient(to right top, #845EC2, #D65DB1, #FF6F91, #FF9671, #FFC75F, #F9F871)</span></div>
+        <div class="color"><span>linear-gradient(to right top, #845EC2, #00eaff, #00ffd9)</span></div>
+        <div class="color"><span>linear-gradient(to right top, #00C9A7, #C4FCEF, #4cc9b0)</span></div>
+        <div class="color"><span>linear-gradient(to right top, #845EC2, #4b4453c4, #c34b36be, #ff8066b5)</span></div>
+        <div class="color"><span> linear-gradient(to right top, #845EC2, #4FFBDF, #00C2A8, #008B74)</span></div>
+        <div class="color"><span>linear-gradient(to right top, #845EC2, #706082, #008970af, #00C0A3)</span></div>
+        <div class="color"><span>linear-gradient(to right top, #845EC2, #B0A8B9, #C34A36, #BEA6A0)</span></div>
+        <div class="color"><span>linear-gradient(to right top, #845EC2, #009EFA, #00D2FC, #4FFBDF)</span></div>
+        <div class="color"><span>linear-gradient(to right top, #FF8066, #845EC2)</span></div>
+        <div class="color"><span>linear-gradient(to right top, #845EC2, #BE36B3, #D43725)</span></div>
+        <div class="color"><span>linear-gradient(to right top, #845EC2, #C493FF, #FEFEDF, #00C9A7)</span></div>
+      </div>
+        </div>
+        <div id="loader">
+          <div class="overlay"></div>
+          <div class="game-start">
+            <i id="setting" class="ri-settings-4-line"></i>
+            <h1>Bubble Tapping Game</h1>
+            <h2>
+              Press button to Start
+              <button class="btn">Start</button>
+            </h2>
           </div>
         </div>
       </div>
@@ -39,7 +58,7 @@
           </h2>
           <h2>
             Timer - 
-            <div class="timer">120</div>
+            <div class="timer">30</div>
           </h2>
           <h2>
             Score - 
@@ -54,6 +73,7 @@
         id="mymusic"
         src="WhatsApp Audio 2024-03-22 at 18.27.48_bc021174.mp3"
       ></audio>
+      <audio id="count" src="count.mp3"></audio>
     </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"

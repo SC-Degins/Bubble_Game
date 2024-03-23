@@ -30,22 +30,21 @@ html, body{
     justify-content: center;
 }
 /* loader animation */
-#loader h3 {
+#setiing-div h3 {
     display: flex;
-    margin-top: 5px;
     gap: 5px;
-    color: #000;
+    color: #fff;
     position: absolute;
-    bottom: 0vw;
     font-family: "Rampart One", sans-serif;
     font-size: 1.4vw;
-    margin-bottom: 1vw;
+    top: 10%;
+    left: 7%;
     letter-spacing: 0.5vw;
 }
 #icon {
     width: 20px;
     height: 20px;
-    color:#000;
+    color:#fff;
 }
 #main-box {
     width: 70%;
@@ -102,7 +101,7 @@ html, body{
     overflow: hidden;
 }
 #panel-bottom>h1{
-    font-size: 10vw;
+    font-size: 5vw;
     background-image: url("blue-luxury-gradient-background-gold-modern-vector-47405255.jpg");
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -122,18 +121,16 @@ html, body{
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-    color: #fff;
+    color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    font-size: 25px;
+    cursor: grab;
+    font-size: 27px;
     font-weight: 700;
 }
-#panel-bottom .bubble:active{
-    box-shadow: inset 3px 3px 10px rgb(255, 255, 255),
-    inset -3px -3px 10px rgb(46, 46, 46);
+#hover:active {
+    cursor: grabbing;
 }
 .reload {
     z-index: 99;
@@ -154,7 +151,6 @@ html, body{
 
 
 #loader-template {
-    background-image: linear-gradient(to right top, #d2e735, #dcde27, #e5d519, #eecc0c, #f6c203, #fab700, #fdac00, #ffa000, #ff9000, #ff8000, #ff6e00, #ff5a00);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -164,12 +160,17 @@ html, body{
     align-items: center;
     object-position: center;
     position: fixed;
-    z-index: 999;
+    z-index: 9999;
     top: 0%;
     transition: all ease 0.5s;
+}
+#loader-back {
+    background-image: linear-gradient(to right top, #d2e735, #dcde27, #e5d519, #eecc0c, #f6c203, #fab700, #fdac00, #ffa000, #ff9000, #ff8000, #ff6e00, #ff5a00);
+    height: 100%;
+    width: 100%;
+    position: absolute;
     animation: gradient linear 20s infinite; 
 }
-
 @keyframes gradient {
     0%{
         filter: hue-rotate(0deg);
@@ -198,6 +199,7 @@ html, body{
     justify-content: center;
     align-items: center;
     flex-direction:column;
+    position: relative;
 }
 .game-start h1 {
     font-size: 4.5vw;
@@ -257,7 +259,93 @@ html, body{
         filter: hue-rotate(10deg);
     }
 }
+#setting {
+    position: absolute;
+    top: 87%;
+    right: 5%;
+    font-size: 2vw;
+    transition: all 0.5s ease-out;
+}
+#setiing-div {
+    background-color: #0000008c;
+    height: 30vw;
+    width: 40vw;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+    scale: 0;
+    transition: scale 0.4s ease-out;
+}
+.overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(231, 6, 6, 0);
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    display: none;
+    transform: translate(-25%, -15%);
+}
+.color {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.color span {
+    color:transparent !important;
+    font-size: 3px;
+    cursor: pointer;
+}
+.color:nth-child(1){
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+.color:nth-child(2){
+    background-image: linear-gradient(to right top, #845EC2, #D65DB1, #FF6F91, #FF9671, #FFC75F, #F9F871);
+}
+.color:nth-child(3){
+    background-image: linear-gradient(to right top, #845EC2, #00eaff, #00ffd9);
+}
+.color:nth-child(4){
+    background-image: linear-gradient(to right top, #00C9A7, #C4FCEF, #4cc9b0);
+}
+.color:nth-child(5){
+    background-image: linear-gradient(to right top, #845EC2, #4b4453c4, #c34b36be, #ff8066b5);
+}
+.color:nth-child(6){
+    background-image: linear-gradient(to right top, #845EC2, #4FFBDF, #00C2A8, #008B74);
+}
+.color:nth-child(7){
+    background-image: linear-gradient(to right top, #845EC2, #706082, #008970af, #00C0A3);
+}
+.color:nth-child(8){
+    background-image: linear-gradient(to right top, #845EC2, #B0A8B9, #C34A36, #BEA6A0);
+}
+.color:nth-child(9){
+    background-image: linear-gradient(to right top, #845EC2, #009EFA, #00D2FC, #4FFBDF);
+}
+.color:nth-child(10){
+    background-image: linear-gradient(to right top, #FF8066, #845EC2);
+}
+.color:nth-child(11){
+    background-image: linear-gradient(to right top, #845EC2, #BE36B3, #D43725);
+}
 
+.color:nth-child(12){
+    background-image: linear-gradient(to right top, #845EC2, #C493FF, #FEFEDF, #00C9A7);
+}
+#color-plate {
+    display: flex;
+    gap:5vw;
+    row-gap: 2vw;
+    flex-wrap: wrap;
+    margin: 6.5vw 4vw;
+}
 /* breakpoint */
 @media (max-width:1140px) {
     .reload {
