@@ -106,7 +106,7 @@ html, body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(8px 6px 4px #3d3d3d);
-    animation: zoomin 0.8s linear 1;
+    animation: zoomin 0.7s linear 1;
 }
 @keyframes zoomin {
     from{
@@ -114,7 +114,8 @@ html, body{
         opacity: 0;
     }
     to{
-        font-size: 10vw;
+        font-size: 5vw;
+        opacity: 1;
     }
 }
 #panel-bottom .bubble {

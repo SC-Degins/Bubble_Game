@@ -28,9 +28,7 @@ function Timeout(){
           }
         } else {
           clearInterval(timerint);
-          document.querySelector(
-            "#panel-bottom"
-          ).innerHTML = `<h1 class="over">Game Over <br> Your Final Score is = ${score}</h1>`;
+          document.querySelector("#panel-bottom").innerHTML = `<h1 class="over">Game Over <br> Your Final Score is = ${score}</h1>`;
         }
     },1000)
 }
