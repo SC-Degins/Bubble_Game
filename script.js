@@ -16,22 +16,25 @@ function getNewHit(){
     document.querySelector(".number").innerHTML = hitrn;
 }
 var score = 0;
-var high;
+
 function scoreincrese() {
   score += 10;
-  high = score;
   document.querySelector(".score").textContent = score;
-  if (high === 0 || high === "null") {
-    localStorage.setItem("highScore", 0);
-  } else if (high > parseInt(localStorage.getItem("highScore"))) {
-    localStorage.removeItem("highScore");
-    localStorage.setItem("highScore", high);
+
+  // Check if highScore is in localStorage, if not, set it to 0
+  let highScore = parseInt(localStorage.getItem("highScore")) || 0;
+
+  if (score > highScore) {
+    localStorage.setItem("highScore", score);
+    document.querySelector("#high-score").innerHTML = score; // Corrected the ID here
   }
 }
+
 var scoreRemember = () => {
   document.querySelector("#heigh-score").innerHTML =
-    localStorage.getItem("highScore");
+    localStorage.getItem("highScore") || 0; // Default to 0 if highScore is not set
 };
+
 var timer = 30;
 var count = document.querySelector("#count");
 function Timeout(){
@@ -53,12 +56,12 @@ function Timeout(){
 document.querySelector("#panel-bottom").addEventListener("click", function(dets){
     var clickedNum = Number(dets.target.textContent);
     if (clickedNum === hitrn) {
-    scoreincrese();
-    getNewHit();
-    Makebubble();
-    document.querySelector("#panel-error").style.display = "none";
+        document.querySelector("#panel-error").style.display = "none";
+        getNewHit();
+        Makebubble();
+        scoreincrese();
 }
-    else if (clickedNum!== hitrn) {
+    else if (clickedNum !== hitrn) {
         document.querySelector("#eror").play();
         document.querySelector("#panel-error").style.display = "block";
     }
