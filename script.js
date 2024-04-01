@@ -15,6 +15,23 @@ function getNewHit(){
     hitrn = Math.floor(Math.random() * 20);
     document.querySelector(".number").innerHTML = hitrn;
 }
+var score = 0;
+var high;
+function scoreincrese() {
+  score += 10;
+  high = score;
+  document.querySelector(".score").textContent = score;
+  if (high === 0 || high === "null") {
+    localStorage.setItem("highScore", 0);
+  } else if (high > parseInt(localStorage.getItem("highScore"))) {
+    localStorage.removeItem("highScore");
+    localStorage.setItem("highScore", high);
+  }
+}
+var scoreRemember = () => {
+  document.querySelector("#heigh-score").innerHTML =
+    localStorage.getItem("highScore");
+};
 var timer = 30;
 var count = document.querySelector("#count");
 function Timeout(){
@@ -32,23 +49,22 @@ function Timeout(){
         }
     },1000)
 }
-var score = 0;
-function scoreincrese(){
-    score += 10;
-    document.querySelector(".score").textContent = score ;
-}
+
 document.querySelector("#panel-bottom").addEventListener("click", function(dets){
     var clickedNum = Number(dets.target.textContent);
     if (clickedNum === hitrn) {
     scoreincrese();
     getNewHit();
-    Makebubble(color_plate);
-    
+    Makebubble();
+    document.querySelector("#panel-error").style.display = "none";
 }
+    else if (clickedNum!== hitrn) {
+        document.querySelector("#eror").play();
+        document.querySelector("#panel-error").style.display = "block";
+    }
 })
 var mymusic = document.querySelector("#mymusic");
-var icons = document.querySelector("#icons");
-var icon = document.querySelector("#icon");
+var icon = document.querySelector("#icons");
 icon.onclick = function(){
     if(mymusic.paused){
     mymusic.play();
@@ -68,9 +84,6 @@ btn.addEventListener("click", function(){
     Timeout();
 })
 }
-loaderup();
-Makebubble();
-getNewHit();
 var flag = 0;
 var setting = document.querySelector("#setting");
 setting.addEventListener("click", function(){
@@ -92,26 +105,53 @@ document.querySelector(".overlay").addEventListener("click", function(){
     document.querySelector("#setting").style.rotate = "0deg";
     flag = 0;
 })
-var colors = document.querySelectorAll(".color");
-document.getElementById("color").style.border = "3px solid #000";
-document.querySelectorAll(".bubble").forEach(function(el){
-    el.style.background = "linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12)";
-});
+var colors = document.querySelectorAll("#color-plate .color");
 function color(){
 colors.forEach(function(e){
     e.addEventListener("click", function(el){
         border();
         var color = el.target.textContent;
         el.target.style.border = "3px solid #000";
-        document.querySelectorAll(".bubble").forEach(function(elem){
-           var color_plate = elem.style.background = color;
-        })
     })
 });
 };
-color();
 function border(){
     document.querySelectorAll(".color").forEach(function(elem){
         elem.style.border = "none";
     })
 }
+colors.forEach(function(e){
+    e.addEventListener("click", function(el){
+        border();
+        localStorage.removeItem("theme");
+        el.target.style.border = "3px solid #000";
+        document.body.setAttribute("theme", e.dataset.colour)
+        localStorage.setItem("theme", e.dataset.colour);
+    })
+});
+function reLoad(){
+    document.querySelector(".reload").addEventListener("click", function(){
+        window.location.reload();
+    })
+}
+
+var themesaver = ()=>{
+document.body.setAttribute("theme", localStorage.getItem("theme"));
+}
+var volumeControler = ()=> {
+    const volumeInput = document.getElementById("volume");
+    const audio = document.getElementById("mymusic");
+
+    volumeInput.addEventListener("input", function () {
+      const volume = volumeInput.value / 100;
+      audio.volume = volume;
+    });
+}
+themesaver();
+reLoad();
+color();
+loaderup();
+Makebubble();
+getNewHit();
+scoreRemember();
+volumeControler();

@@ -1,3 +1,4 @@
+/* TODO: fonts */
 @import url('https://fonts.googleapis.com/css2?family=Festive&family=MedievalSharp&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Festive&family=MedievalSharp&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Festive&family=MedievalSharp&family=Rampart+One&display=swap');
@@ -9,6 +10,7 @@
     font-family: Game_start;
     src: url("pacfont/PAC-FONT.TTF");
 }
+/* TODO: styling */
 *{
     margin: 0;
     padding: 0;
@@ -18,6 +20,92 @@ html, body{
     height: 100%;
     width: 100%;
 }
+/*TODO: custome theme */
+body[theme="blue"] #panel-bottom .bubble{
+    background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    color:#fff;
+}
+body[theme="blue"] #main{
+    background-image: url("photo-1711409496386-ad2c5946ac7f.avif");
+}
+body[theme="pink"] #panel-bottom .bubble{
+    background-image: linear-gradient(to right top, #845EC2, #D65DB1, #FF6F91, #FF9671, #FFC75F, #F9F871);
+    color:#000;
+}
+body[theme="pink"] #main{
+    background-image: url("Screenshot 2024-03-24 220419.png");
+}
+body[theme="cyan"] #panel-bottom .bubble{
+    background-image: linear-gradient(to right top, #845EC2, #00eaff, #00ffd9);
+    color:#000;
+}
+body[theme="cyan"] #main{
+    background-image: url("Screenshot 2024-03-24 220441.png");
+}
+body[theme="lightcyan"] #panel-bottom .bubble{
+    background-image: linear-gradient(to right top, #00C9A7, #C4FCEF, #4cc9b0);
+    color:#000;
+}
+body[theme="lightcyan"] #main{
+    background-image: ulr("Screenshot 2024-03-27 003229.png");
+}
+body[theme="brown"] #panel-bottom .bubble{
+    background-image: linear-gradient(to right top, #845EC2, #4b4453c4, #c34b36be, #ff8066b5);
+    color:#fff;
+}
+body[theme="brown"] #main{
+    background-image: url("Screenshot 2024-03-28 222527.png");
+}
+body[theme="seagreen"] #panel-bottom .bubble{
+    background-image: linear-gradient(to right top, #845EC2, #4FFBDF, #00C2A8, #008B74);
+    color:#000;
+}
+body[theme="seagreen"] #main{
+    background-image: url("Screenshot 2024-03-28 222545.png");
+}
+body[theme="darksea"] #panel-bottom .bubble{
+    background-image: linear-gradient(to right top, #845EC2, #706082, #008970af, #00C0A3);
+    color:#fff;
+}
+body[theme="darksea"] #main{
+    background-image: url("anime-aesthetic-pictures-lqtumoq8zq18qvfs.jpg");
+}
+body[theme="lightbrown"] #panel-bottom .bubble{
+    background-image: linear-gradient(to right top, #845EC2, #B0A8B9, #C34A36, #BEA6A0);
+    color:#fff;
+}
+body[theme="lightbrown"] #main{
+    background-image: url("aot.jpg");
+}
+body[theme="deepsea"] #panel-bottom .bubble{
+    background-image: linear-gradient(to right top, #845EC2, #009EFA, #00D2FC, #4FFBDF);
+    color:#000;
+}
+body[theme="deepsea"] #main{
+    background-image: url("gojo.webp");
+}
+body[theme="asian"] #panel-bottom .bubble{
+    background-image: linear-gradient(to right top, #FF8066, #845EC2);
+    color:#000;
+}
+body[theme="asian"] #main{
+    background-image: url("wp5897845.jpg");
+}
+body[theme="astricpink"] #panel-bottom .bubble{
+    background-image: linear-gradient(to right top, #845EC2, #BE36B3, #D43725);
+    color:#fff;
+}
+body[theme="astricpink"] #main{
+    background-image: url("premium_photo-1661878091370-4ccb8763756a.avif");
+}
+body[theme="lumines"] #panel-bottom .bubble{
+    background-image: linear-gradient(to right top, #845EC2, #C493FF, #FEFEDF, #00C9A7);
+    color:#000;
+}
+body[theme="lumines"] #main{
+    background-image: url("tiger.png");
+}
+/* TODO: gaming pannel styling */
 #main{
     background-image: url("aesthetic-anime-scenery-u9q6cmyl6eclnb62.jpg");
     height: 100%;
@@ -41,6 +129,7 @@ html, body{
     left: 7%;
     letter-spacing: 0.5vw;
 }
+/* TODO: setting icon */
 #icon {
     width: 20px;
     height: 20px;
@@ -48,7 +137,7 @@ html, body{
 }
 #main-box {
     width: 70%;
-    height: 85%;
+    height: 90%;
     background-color: transparent;
     border-radius: 10px;
     overflow: hidden;
@@ -69,6 +158,7 @@ html, body{
     gap: 20px;
     align-items: center;
 }
+/* TODO: multi-selector */
 .number,
 .timer,
 .score {
@@ -92,7 +182,7 @@ html, body{
     backdrop-filter: blur(10px);
     height: calc(100% - 70px);
     width: 100%;
-    padding:  15px 29px;
+    padding:  17px 29px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,6 +198,7 @@ html, body{
     filter: drop-shadow(8px 6px 4px #3d3d3d);
     animation: zoomin 0.7s linear 1;
 }
+/* TODO: Animation */
 @keyframes zoomin {
     from{
         font-size: 0vw;
@@ -118,11 +209,11 @@ html, body{
         opacity: 1;
     }
 }
+/* TODO: bubble styling */
 #panel-bottom .bubble {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,12 +313,54 @@ html, body{
     flex-direction:column;
     font-family: "Cedarville Cursive", cursive;
 }
-
+#panel-error {
+    background-color: #00eaff83;
+    backdrop-filter: blur(1px);
+    position: relative;
+    width: 40vw;
+    margin-bottom: 0.5vw;
+    overflow: hidden;
+    border-radius: 10px;
+    top: -1%;
+    padding: 0;
+    display:none;
+}
+#panel-error>h2>img{
+    height:1.8vw;
+    animation: offon 0.2s linear infinite;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+@keyframes offon {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#panel-error>h2 {
+    color: #fff;
+    animation: marquee 5s linear infinite;
+    filter: drop-shadow(2px 2px 2px #000);
+    font-family:fantasy;
+    font-size: 1.9vw;
+    font-weight: 100;
+    letter-spacing: 0.3vw;
+}
+@keyframes marquee {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-80%);
+    }
+}
 .game-start h2 button {
     font-size: 2vw;
     width: 15vw;
     height: 6vh;
-    background-color:black;
+    background-color:rgb(7, 79, 103);
     text-transform: uppercase;
     font-weight: 600;
     font-family: "MedievalSharp", cursive;
@@ -244,8 +377,7 @@ html, body{
     transition: all 0.3s ease-out;
 }
 .game-start button:hover {
-    animation: colorchange 7s linear infinite;
-    animation-delay: 0.2s;
+    animation: colorchange 15s linear infinite;
     width: 25vw;
     letter-spacing: 2vw;
 }
@@ -283,24 +415,21 @@ html, body{
 }
 .overlay {
     position: fixed;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(231, 6, 6, 0);
+    height: 120vh;
+    width: 120vw;
+    background-color: rgba(191, 191, 191, 0.795);
     z-index: 999999;
     top: 0;
     left: 0;
     display: none;
+    backdrop-filter: blur(15px);
     transform: translate(-25%, -15%);
 }
+/* TODO: All colors  */
 .color {
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
-    cursor: pointer;
-}
-.color span {
-    color:transparent !important;
-    font-size: 3px;
     cursor: pointer;
 }
 .color:nth-child(1){
@@ -345,8 +474,50 @@ html, body{
     gap:5vw;
     row-gap: 2vw;
     flex-wrap: wrap;
-    margin: 6.5vw 4vw;
+    margin: 2.5vw 2.5vw;
 }
+#h-score{
+    font-size: 1.2vw;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.5vw;
+}
+    #sound{
+        padding: 2vw 4vw 2vw 4vw;
+    }
+    #sound>h2{
+        color:#fff;
+        font-size: 2vw;
+        margin-left: 1vw;
+    }
+    #icon{
+        font-size: 2vw;
+    }
+    .sound-bar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+    -webkit-appearance: none;
+    outline: none;
+    width: 90vw;
+    height: 10px;
+    background: #d1d1d1;
+    border-radius: 20px;
+    margin-right: 2vw;
+    background: rgb(30, 239, 190);
+    }
+    input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 30px;
+    height: 20px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom right, rgb(208, 0, 255),rgba(174, 0, 255, 0.754),blue);
+    }
+
 /* breakpoint */
 @media (max-width:1140px) {
     .reload {
@@ -504,5 +675,80 @@ html, body{
     font-size: 7vw;
     -webkit-text-stroke-width: 1px;
     margin-bottom: 15vw;
+    }
+    .overlay{
+        top:-30%;
+        left: 20%;
+    }
+    #setiing-div{
+       height: 140vw;
+       width: 90vw;
+       top: 50%;
+    }
+    #color-plate{
+        margin: 10vw 4vw 0vw 4vw;
+        gap: 9vw;
+        row-gap: 3vw;
+    }
+    .color {
+    height: 80px;
+    width: 80px;
+    }
+    #setiing-div>h3{
+        font-size: 4vw;
+    }
+    #h-score{
+        font-size: 4vw;
+        margin-bottom: 10vw;
+    }
+    .game-start h2 button{
+        font-size: 6vw;
+        color:#fff;
+    }
+    .game-start button:hover {
+    animation: colorchange 15s linear infinite;
+    width: 70vw;
+    letter-spacing: 2vw;
+    }
+    #setting{
+        font-size: 7vw;
+    }
+    #sound{
+        padding: 4vw 9vw 2vw 9vw;
+    }
+    #sound>h2{
+        color:#fff;
+        font-size: 5vw;
+        margin-left: 1vw;
+    }
+    #icon{
+        font-size: 7vw;
+    }
+    .sound-bar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sound-bars{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+    -webkit-appearance: none;
+    outline: none;
+    width: 90vw;
+    height: 10px;
+    background: #d1d1d1;
+    border-radius: 20px;
+    margin-right: 2vw;
+    background: rgb(30, 239, 190);
+    }
+    input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 30px;
+    height: 20px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom right, rgb(208, 0, 255),rgba(174, 0, 255, 0.754),blue);
     }
 }

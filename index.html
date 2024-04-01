@@ -5,43 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bubble Tapping Game</title>
     <link rel="shortcut icon" href="android-chrome-512x512.png" type="image/x-icon">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
-
-  <body>
+  <body theme="blue">
     <div id="main">
       <div id="loader-template">
         <div id="loader-back"></div>
         <div id="setiing-div">
-          <h3>
-        If You Want To Play Music&nbsp;
-        <span id="icon">
-       <i id="icon" class="ri-volume-mute-line"></i>
-       </span>
-      </h3>
+          <div id="sound">
+            <h2>Music</h2>
+            <div class="sound-bar">
+              <input type="range" id="volume">
+              <span id="icons">
+              <i id="icon" class="ri-volume-mute-line"></i>
+              </span>
+            </div>
+          </div>
       <div id="color-plate">
-        <div class="color" id="color"><span>linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12)</span></div>
-        <div class="color"><span>linear-gradient(to right top, #845EC2, #D65DB1, #FF6F91, #FF9671, #FFC75F, #F9F871)</span></div>
-        <div class="color"><span>linear-gradient(to right top, #845EC2, #00eaff, #00ffd9)</span></div>
-        <div class="color"><span>linear-gradient(to right top, #00C9A7, #C4FCEF, #4cc9b0)</span></div>
-        <div class="color"><span>linear-gradient(to right top, #845EC2, #4b4453c4, #c34b36be, #ff8066b5)</span></div>
-        <div class="color"><span> linear-gradient(to right top, #845EC2, #4FFBDF, #00C2A8, #008B74)</span></div>
-        <div class="color"><span>linear-gradient(to right top, #845EC2, #706082, #008970af, #00C0A3)</span></div>
-        <div class="color"><span>linear-gradient(to right top, #845EC2, #B0A8B9, #C34A36, #BEA6A0)</span></div>
-        <div class="color"><span>linear-gradient(to right top, #845EC2, #009EFA, #00D2FC, #4FFBDF)</span></div>
-        <div class="color"><span>linear-gradient(to right top, #FF8066, #845EC2)</span></div>
-        <div class="color"><span>linear-gradient(to right top, #845EC2, #BE36B3, #D43725)</span></div>
-        <div class="color"><span>linear-gradient(to right top, #845EC2, #C493FF, #FEFEDF, #00C9A7)</span></div>
+        <div data-colour="blue" class="color" id="color"></div>
+        <div data-colour="pink" class="color"></div>
+        <div data-colour="cyan" class="color"></div>
+        <div data-colour="lightcyan" class="color"></div>
+        <div data-colour="brown" class="color"></div>
+        <div data-colour="seagreen" class="color"></div>
+        <div data-colour="darksea" class="color"></div>
+        <div data-colour="lightbrown" class="color"></div>
+        <div data-colour="deepsea" class="color"></div>
+        <div data-colour="asian" class="color"></div>
+        <div data-colour="astricpink" class="color"></div>
+        <div data-colour="lumines" class="color"></div>
       </div>
         </div>
         <div id="loader">
           <div class="overlay"></div>
           <div class="game-start">
             <i id="setting" class="ri-settings-4-line"></i>
+            <p id="h-score">Your Highest score:<span id="heigh-score">0</span></p>
             <h1>Bubble Tapping Game</h1>
             <h2>
               Press button to Start
@@ -49,6 +49,9 @@
             </h2>
           </div>
         </div>
+      </div>
+      <div id="panel-error">
+        <h2><img src="cross.gif" alt="">You Select Wrong Bubble<img src="cross.gif" alt=""></h2>
       </div>
       <div id="main-box">
         <div id="panel-top">
@@ -67,13 +70,14 @@
         </div>
         <div id="panel-bottom"></div>
       </div>
-      <button class="reload" onclick="window.location.reload()">Re-Start</button>
+      <button class="reload">Re-Start</button>
       <audio src="click1.mp3" id="music"></audio>
-      <audio
+      <audio loop
         id="mymusic"
         src="WhatsApp Audio 2024-03-22 at 18.27.48_bc021174.mp3"
       ></audio>
       <audio id="count" src="count.mp3"></audio>
+      <audio id="eror" src="error.mp3"></audio>
     </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
