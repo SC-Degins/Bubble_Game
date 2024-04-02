@@ -1,3 +1,4 @@
+// TODO: Raw JavaScript
 var click = document.getElementById("music");
 function Makebubble(){
     var a ="";
@@ -16,7 +17,6 @@ function getNewHit(){
     document.querySelector(".number").innerHTML = hitrn;
 }
 var score = 0;
-
 function scoreincrese() {
   score += 10;
   document.querySelector(".score").textContent = score;
@@ -29,12 +29,10 @@ function scoreincrese() {
     document.querySelector("#high-score").innerHTML = score; // Corrected the ID here
   }
 }
-
 var scoreRemember = () => {
   document.querySelector("#heigh-score").innerHTML =
     localStorage.getItem("highScore") || 0; // Default to 0 if highScore is not set
 };
-
 var timer = 30;
 var count = document.querySelector("#count");
 function Timeout(){
@@ -52,7 +50,6 @@ function Timeout(){
         }
     },1000)
 }
-
 document.querySelector("#panel-bottom").addEventListener("click", function(dets){
     var clickedNum = Number(dets.target.textContent);
     if (clickedNum === hitrn) {
@@ -60,6 +57,7 @@ document.querySelector("#panel-bottom").addEventListener("click", function(dets)
         getNewHit();
         Makebubble();
         scoreincrese();
+        hovereffect();
 }
     else if (clickedNum !== hitrn) {
         document.querySelector("#eror").play();
@@ -77,14 +75,18 @@ icon.onclick = function(){
         icon.innerHTML = `<i id="icon" class="ri-volume-mute-line"></i>`;
     }
 }
-
-// gsap
 var loader = document.querySelector("#loader-template");
 var btn = document.querySelector(".btn");
 function loaderup(){
 btn.addEventListener("click", function(){
     loader.style.top = "-110%";
-    Timeout();
+    gsap.from(".bubble", {
+      y: 550,
+      stagger: 0.05,
+      duration: 0.2,
+      onComplete: Timeout
+    });
+    
 })
 }
 var flag = 0;
@@ -150,6 +152,51 @@ var volumeControler = ()=> {
       audio.volume = volume;
     });
 }
+function hovereffect() {
+  document.querySelectorAll(".bubble").forEach(function (element) {
+    element.addEventListener("mouseenter", function () {
+      this.style.scale = "0.9";
+    });
+    element.addEventListener("mouseout", function () {
+        this.style.scale = "1";
+    });
+  });
+}
+
+//TODO: gsap
+var tl = gsap.timeline();
+tl.from("#loader",{
+    scale: 0,
+    duration: 1,
+    delay: 0.5,
+    ease: Power4
+});
+tl.from("#h-score", {
+  y: -150,
+  opacity: 0,
+  duration: 0.4,
+  ease: "power3.ease-out",
+});
+tl.from("#game-heading", {
+  y: 150,
+  duration: 0.8,
+});
+tl.from("#opacity-text",{
+    opacity: 0,
+    duration: 0.5
+})
+tl.to(".btn", {
+  opacity: 1,
+  duration: 0.5,
+  scale:1
+});
+tl.to("#setting",{
+    opacity: 1,
+    rotate:900,
+    duration: 0.7
+});
+
+// TODO: Function Calling
 themesaver();
 reLoad();
 color();
@@ -158,3 +205,4 @@ Makebubble();
 getNewHit();
 scoreRemember();
 volumeControler();
+hovereffect();

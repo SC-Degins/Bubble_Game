@@ -28,12 +28,18 @@ body[theme="blue"] #panel-bottom .bubble{
 body[theme="blue"] #main{
     background-image: url("photo-1711409496386-ad2c5946ac7f.avif");
 }
+body[theme="blue"] #panel-top{
+    background-color: rgba(197, 243, 11, 0.527);
+}
 body[theme="pink"] #panel-bottom .bubble{
     background-image: linear-gradient(to right top, #845EC2, #D65DB1, #FF6F91, #FF9671, #FFC75F, #F9F871);
     color:#000;
 }
 body[theme="pink"] #main{
     background-image: url("Screenshot 2024-03-24 220419.png");
+}
+body[theme="pink"] #panel-top{
+    background-color: rgba(234, 1, 255, 0.527);
 }
 body[theme="cyan"] #panel-bottom .bubble{
     background-image: linear-gradient(to right top, #845EC2, #00eaff, #00ffd9);
@@ -42,12 +48,18 @@ body[theme="cyan"] #panel-bottom .bubble{
 body[theme="cyan"] #main{
     background-image: url("Screenshot 2024-03-24 220441.png");
 }
+body[theme="cyan"] #panel-top{
+    background-color: rgba(0, 255, 234, 0.527);
+}
 body[theme="lightcyan"] #panel-bottom .bubble{
     background-image: linear-gradient(to right top, #00C9A7, #C4FCEF, #4cc9b0);
     color:#000;
 }
 body[theme="lightcyan"] #main{
     background-image: ulr("Screenshot 2024-03-27 003229.png");
+}
+body[theme="lightcyan"] #panel-top{
+    background-color: rgba(0, 255, 200, 0.527);
 }
 body[theme="brown"] #panel-bottom .bubble{
     background-image: linear-gradient(to right top, #845EC2, #4b4453c4, #c34b36be, #ff8066b5);
@@ -56,12 +68,18 @@ body[theme="brown"] #panel-bottom .bubble{
 body[theme="brown"] #main{
     background-image: url("Screenshot 2024-03-28 222527.png");
 }
+body[theme="brown"] #panel-top{
+    background-color: rgba(145, 86, 23, 0.527);
+}
 body[theme="seagreen"] #panel-bottom .bubble{
     background-image: linear-gradient(to right top, #845EC2, #4FFBDF, #00C2A8, #008B74);
     color:#000;
 }
 body[theme="seagreen"] #main{
     background-image: url("Screenshot 2024-03-28 222545.png");
+}
+body[theme="seagreen"] #panel-top{
+    background-color: rgba(0, 102, 255, 0.527);
 }
 body[theme="darksea"] #panel-bottom .bubble{
     background-image: linear-gradient(to right top, #845EC2, #706082, #008970af, #00C0A3);
@@ -70,12 +88,18 @@ body[theme="darksea"] #panel-bottom .bubble{
 body[theme="darksea"] #main{
     background-image: url("anime-aesthetic-pictures-lqtumoq8zq18qvfs.jpg");
 }
+body[theme="darksea"] #panel-top{
+    background-color: rgba(120, 6, 213, 0.527);
+}
 body[theme="lightbrown"] #panel-bottom .bubble{
     background-image: linear-gradient(to right top, #845EC2, #B0A8B9, #C34A36, #BEA6A0);
     color:#fff;
 }
 body[theme="lightbrown"] #main{
     background-image: url("aot.jpg");
+}
+body[theme="lightbrown"] #panel-top{
+    background-color: rgba(255, 0, 76, 0.527);
 }
 body[theme="deepsea"] #panel-bottom .bubble{
     background-image: linear-gradient(to right top, #845EC2, #009EFA, #00D2FC, #4FFBDF);
@@ -84,12 +108,18 @@ body[theme="deepsea"] #panel-bottom .bubble{
 body[theme="deepsea"] #main{
     background-image: url("gojo.webp");
 }
+body[theme="deepsea"] #panel-top{
+    background-color: rgba(0, 255, 200, 0.527);
+}
 body[theme="asian"] #panel-bottom .bubble{
     background-image: linear-gradient(to right top, #FF8066, #845EC2);
     color:#000;
 }
 body[theme="asian"] #main{
     background-image: url("wp5897845.jpg");
+}
+body[theme="asian"] #panel-top{
+    background-color: rgba(250, 83, 49, 0.527);
 }
 body[theme="astricpink"] #panel-bottom .bubble{
     background-image: linear-gradient(to right top, #845EC2, #BE36B3, #D43725);
@@ -98,12 +128,18 @@ body[theme="astricpink"] #panel-bottom .bubble{
 body[theme="astricpink"] #main{
     background-image: url("premium_photo-1661878091370-4ccb8763756a.avif");
 }
+body[theme="astricpink"] #panel-top{
+    background-color: rgba(243, 11, 77, 0.527);
+}
 body[theme="lumines"] #panel-bottom .bubble{
     background-image: linear-gradient(to right top, #845EC2, #C493FF, #FEFEDF, #00C9A7);
     color:#000;
 }
 body[theme="lumines"] #main{
     background-image: url("tiger.png");
+}
+ body[theme="lumines"] #panel-top{
+    background-color: rgba(0, 255, 89, 0.527);
 }
 /* TODO: gaming pannel styling */
 #main{
@@ -209,8 +245,15 @@ body[theme="lumines"] #main{
         opacity: 1;
     }
 }
+#game-head{
+    position: relative;
+    height: 10vw;
+    width: 43vw;
+    overflow: hidden;
+}
 /* TODO: bubble styling */
 #panel-bottom .bubble {
+    background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -278,9 +321,8 @@ body[theme="lumines"] #main{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff3b;
-    backdrop-filter: blur(10px);
     border-radius: 25px;
+    background: linear-gradient(to top right,#845ec2e7,#2c74d2de,#0080cfb9,#079ed4e0,#04adbdd3,#30a392e1);
     position: relative;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.623), inset 10px 10px 25px rgb(255, 255, 255);
 }
@@ -297,7 +339,7 @@ body[theme="lumines"] #main{
     font-size: 4.5vw;
     margin-bottom: 4vh;
     font-family: Game;
-    -webkit-text-fill-color: transparent !important;
+    -webkit-text-fill-color: #d5ff03;
     font-weight: 500;
     -webkit-text-stroke-color: #000;
     -webkit-text-stroke-width: 2px;
@@ -356,7 +398,7 @@ body[theme="lumines"] #main{
         transform: translateX(-80%);
     }
 }
-.game-start h2 button {
+.game-start button {
     font-size: 2vw;
     width: 15vw;
     height: 6vh;
@@ -375,6 +417,8 @@ body[theme="lumines"] #main{
     left: 50%;
     transform: translateX(-50%);
     transition: all 0.3s ease-out;
+    opacity: 0;
+    scale:0;
 }
 .game-start button:hover {
     animation: colorchange 15s linear infinite;
@@ -396,8 +440,9 @@ body[theme="lumines"] #main{
     position: absolute;
     top: 87%;
     right: 5%;
-    font-size: 2vw;
+    font-size: 2.5vw;
     transition: all 0.5s ease-out;
+    opacity: 0;
 }
 #setiing-div {
     background-color: #0000008c;
@@ -591,10 +636,12 @@ body[theme="lumines"] #main{
     bottom: 3vh;
     font-size: 3vw;
 }
-.game-start h2 button {
-    bottom: 12vh;
-    width: 60%;
-    height: 10vw;
+.game-start button {
+    bottom: 10vh;
+    width: 70%;
+    height: 15vw;
+    color:#fff;
+    font-size: 7vw;
 }
 .reload {
     z-index: 99;
@@ -668,9 +715,13 @@ body[theme="lumines"] #main{
         color: #000;
         margin-bottom: 15vw;
     }
-    .game-start h2 button {
-        bottom: 10vh;
-    }
+    .game-start button {
+    bottom: 10vh;
+    width: 70%;
+    height: 15vw;
+    color:#fff;
+    font-size: 7vw;
+}
     .game-start>h1{
     font-size: 7vw;
     -webkit-text-stroke-width: 1px;
@@ -701,14 +752,27 @@ body[theme="lumines"] #main{
         font-size: 4vw;
         margin-bottom: 10vw;
     }
-    .game-start h2 button{
-        font-size: 6vw;
-        color:#fff;
-    }
+    .game-start button {
+    bottom: 10vh;
+    width: 70%;
+    height: 15vw;
+    color:#fff;
+    font-size: 7vw;
+}
     .game-start button:hover {
-    animation: colorchange 15s linear infinite;
-    width: 70vw;
+    animation: none;
+    width: 70%;
     letter-spacing: 2vw;
+    }
+    #game-head{
+        height: 26vw;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #game-heading{
+        font-size: 7.5vw;
     }
     #setting{
         font-size: 7vw;
@@ -733,6 +797,20 @@ body[theme="lumines"] #main{
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    #panel-error{
+        top: 89%;
+        z-index: 1;
+        width: 80%;
+        height: 8vw;
+    }
+    #panel-error>h2{
+        font-size: 5vw;
+        color: #fff;
+        margin-top: 1vw;
+    }
+    #panel-error>h2>img{
+        height: 3.5vw;
     }
     input{
     -webkit-appearance: none;
