@@ -82,8 +82,9 @@ btn.addEventListener("click", function(){
     loader.style.top = "-110%";
     gsap.from(".bubble", {
       y: 550,
+      scale:1.2,
       stagger: 0.05,
-      duration: 0.2,
+      duration: 0.25,
       onComplete: Timeout
     });
     
