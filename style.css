@@ -36,7 +36,7 @@ body[theme="pink"] #panel-bottom .bubble{
     color:#000;
 }
 body[theme="pink"] #main{
-    background-image: url("Screenshot 2024-03-24 220419.png");
+    background-image: url("milkiway.webp");
 }
 body[theme="pink"] #panel-top{
     background-color: rgba(234, 1, 255, 0.527);
@@ -46,7 +46,7 @@ body[theme="cyan"] #panel-bottom .bubble{
     color:#000;
 }
 body[theme="cyan"] #main{
-    background-image: url("Screenshot 2024-03-24 220441.png");
+    background-image: url("senior.webp");
 }
 body[theme="cyan"] #panel-top{
     background-color: rgba(0, 255, 234, 0.527);
@@ -56,7 +56,7 @@ body[theme="lightcyan"] #panel-bottom .bubble{
     color:#000;
 }
 body[theme="lightcyan"] #main{
-    background-image: ulr("Screenshot 2024-03-27 003229.png");
+    background-image: ulr("river.webp");
 }
 body[theme="lightcyan"] #panel-top{
     background-color: rgba(0, 255, 200, 0.527);
@@ -66,7 +66,7 @@ body[theme="brown"] #panel-bottom .bubble{
     color:#fff;
 }
 body[theme="brown"] #main{
-    background-image: url("Screenshot 2024-03-28 222527.png");
+    background-image: url("bridge.webp");
 }
 body[theme="brown"] #panel-top{
     background-color: rgba(145, 86, 23, 0.527);
@@ -76,7 +76,7 @@ body[theme="seagreen"] #panel-bottom .bubble{
     color:#000;
 }
 body[theme="seagreen"] #main{
-    background-image: url("Screenshot 2024-03-28 222545.png");
+    background-image: url("bird.webp");
 }
 body[theme="seagreen"] #panel-top{
     background-color: rgba(0, 102, 255, 0.527);
@@ -86,7 +86,7 @@ body[theme="darksea"] #panel-bottom .bubble{
     color:#fff;
 }
 body[theme="darksea"] #main{
-    background-image: url("anime-aesthetic-pictures-lqtumoq8zq18qvfs.jpg");
+    background-image: url("anime.webp");
 }
 body[theme="darksea"] #panel-top{
     background-color: rgba(120, 6, 213, 0.527);
@@ -96,7 +96,7 @@ body[theme="lightbrown"] #panel-bottom .bubble{
     color:#fff;
 }
 body[theme="lightbrown"] #main{
-    background-image: url("aot.jpg");
+    background-image: url("aot.webp");
 }
 body[theme="lightbrown"] #panel-top{
     background-color: rgba(255, 0, 76, 0.527);
@@ -116,7 +116,7 @@ body[theme="asian"] #panel-bottom .bubble{
     color:#000;
 }
 body[theme="asian"] #main{
-    background-image: url("wp5897845.jpg");
+    background-image: url("nightSky.webp");
 }
 body[theme="asian"] #panel-top{
     background-color: rgba(250, 83, 49, 0.527);
@@ -136,14 +136,14 @@ body[theme="lumines"] #panel-bottom .bubble{
     color:#000;
 }
 body[theme="lumines"] #main{
-    background-image: url("tiger.png");
+    background-image: url("tiger.webp");
 }
  body[theme="lumines"] #panel-top{
     background-color: rgba(0, 255, 89, 0.527);
 }
 /* TODO: gaming pannel styling */
 #main{
-    background-image: url("aesthetic-anime-scenery-u9q6cmyl6eclnb62.jpg");
+    background-image: url("photo-1711409496386-ad2c5946ac7f.avif");
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
