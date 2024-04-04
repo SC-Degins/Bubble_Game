@@ -662,7 +662,7 @@ body[theme="lumines"] #main{
     backdrop-filter: blur(9px);
 }
 }
-@media (max-width:400px){
+@media (max-width:550px){
     #main-box{
         height: 90%;
         width: 90%;
