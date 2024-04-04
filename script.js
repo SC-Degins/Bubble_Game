@@ -33,7 +33,7 @@ var scoreRemember = () => {
   document.querySelector("#heigh-score").innerHTML =
     localStorage.getItem("highScore") || 0; // Default to 0 if highScore is not set
 };
-var timer = 30;
+var timer = 15;
 var count = document.querySelector("#count");
 function Timeout(){
     var timerint = setInterval(function(){
@@ -84,7 +84,7 @@ btn.addEventListener("click", function(){
       y: 550,
       scale:1.2,
       stagger: 0.05,
-      duration: 0.25,
+      duration: 0.1,
       onComplete: Timeout
     });
     
